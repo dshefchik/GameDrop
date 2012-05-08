@@ -1,0 +1,45 @@
+{% extends "base.html" %} {% block title %}Game Repo - Add{% endblock %}
+
+{% block content %}
+<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}js/placeholder.js"></script>  
+
+<h2>Add a Game We Already Own!</h2>
+{% if game %}
+<p id="success">
+{{ game.title }} added to collection!
+</p>
+{% endif %}
+<div class="gamesList" style="float:left">
+<h2>Our Collection</h2>
+<table class="game-table">
+	{% for g in owned %}
+	<tr><td>{{ g.title }}</td></tr>
+	{% endfor %}
+</table>
+<form method="post" action="add/">{% csrf_token %}
+<p>{{ form.title }} {{ form.title.errors }}  
+<input class="submit" type="submit" value="Add" /></p>
+</form>
+</div>
+<div class="gamesList" style="float:right">
+<h2>Wish List</h2>
+<table class="game-table">
+	{% for g in wanted %}
+	<tr><form method="post" action='add/'>{% csrf_token %}
+	<td>{{ g.title }}</td><input type="hidden" name="gameID" value="{{ g.pk }}"/>
+	<td>Votes: {{g.votes}}
+	<input type="submit" value="Add to Collection" /></td>
+	
+	</form>
+	</tr>
+	{% endfor %}
+	
+</table>
+</div>
+
+
+<script type="text/javascript">                                         
+   $('input').placeholderFunction('input-focused');       
+ </script>   
+{% endblock %}

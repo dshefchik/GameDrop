@@ -1,0 +1,57 @@
+{% extends "base.html" %} {% block title %}Game Rep - Home{% endblock %}
+
+{% block content %}
+<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}js/placeholder.js"></script>
+<h2>Xbox Game Repo</h2>     
+<div class="gamesList" style="float:left">
+<h2>Our Collection<a style="font-size: 16px; margin-left: 16px" href="/add">Manage</a></h2>
+<table class="game-table">
+	{% for g in owned %}
+	<tr><td>{{ g.title }}</td></tr>
+	{% endfor %}
+</table>
+</div>
+<div class="gamesList" style="float:right">
+<h2>Wish List</h2>
+<table class="game-table">
+	{% for g in wanted %}
+	<tr><form method="post" action='/'>{% csrf_token %}
+	<td>{{ g.title }}</td><input type="hidden" name="gameID" value="{{ g.pk }}"/>
+	<td>Votes: {{g.votes}}
+	<input type="submit" value="Vote" />
+	</td>
+	</form>
+	</tr>
+	{% endfor %}
+	
+</table>
+{% if messages %}
+<ul class="errorlist">
+    {% for message in messages %}
+    <li>
+    {{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+{{ form.title.errors }}
+<form method="post" action="/">{% csrf_token %}
+<p>{{ form.title }}
+<input class="submit" type="submit" value="Add" /></p>
+</form>
+
+{% if game %}
+<p id="success">
+{{ game.title }} added!
+</p>
+{% endif %}
+
+</div>
+<h4>
+
+</h4>
+<script type="text/javascript">                                         
+   $('input').placeholderFunction('input-focused');       
+ </script>   
+{% endblock %}

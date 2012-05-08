@@ -1,0 +1,190 @@
+body {
+	text-align: center;
+	font-family: Helvetica, Arial, Sans-Serif;
+	background: #A4A4A4;
+	margin-top: 12px;
+	margin-bottom: 5px;
+}
+
+footer {
+	padding: 15px;
+	width: 960px;
+	margin: 50px auto 20px;
+	font-size: 14px;
+	color: white;
+	text-align: center;
+}
+
+#wrapper {
+	margin: auto;
+	width: 800px;
+	display: inline-block;
+}
+
+.gamesList {
+	width: 375px;
+	background-color: #E3ECE9;
+	-moz-box-shadow: 0px 5px 10px -2px #555;
+	-webkit-box-shadow: 0px 5px 10px -2px #555;
+	box-shadow: 0px 5px 10px -2px #555;
+	padding: 10px;
+	margin-bottom: 10px;
+	margin-top: 50px;
+	text-align: center;
+}
+
+#owned {
+	float: left;
+	}
+#wanted {
+	float: right;
+	}
+	
+.gamesList ul {
+	margin-left: auto;
+	margin-right: auto;
+	}
+li {
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+.gamesList li {
+	padding: 5px;
+	border-top-style: solid;
+	border-width: 1px;
+	border-color: black;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+	
+.game-table {
+	border-collapse:collapse;
+	margin: auto;
+	}
+.game-table td{
+	border: 1px solid black;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	}
+	
+#id_title {
+	font-size: 25px;
+	height: 30px;
+	width: 300px;
+	margin: 15px, auto;
+}
+
+.submit {
+	font-size: 25px;
+	}
+
+h1 {
+	color: black;
+	font-family: Helvetica, Arial, Sans-Serif;
+	font-size: 65px;
+	font-weight: normal;
+	letter-spacing: -2px;
+}
+
+h2 {
+	font-family: Champagne, Helvetica, Sans-Serif;
+	font-size: 36px;
+	font-weight: normal;
+	letter-spacing: 0px;
+	color: #323232;
+	margin: 0px 0px 18px;
+}
+
+h2.thanks {
+	color: #009cc1;
+	margin: 0px 0px 0px;
+}
+
+h3 {
+	font-family: Champagne, Helvetica, Sans-Serif;
+	font-size: 28px;
+	font-weight: normal;
+	color: #323232;
+	margin: 0px 0px 0px;
+}
+
+h3.thanks {
+	margin: 0px 0px 20px;
+}
+
+h4 {
+	font-size: 14px;
+	font-weight: normal;
+	color: #636363;
+	margin: 2px 0px 20px;
+	line-height: 18px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+ul.errorlist {
+	
+	list-style-type: none;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 12px;
+	color: red;
+}
+
+ul.errorlist li{
+	color: red;
+	border-style: none;
+	}
+
+
+
+#url {
+	font-size: 30px;
+	width: 425px;
+	margin: 2px 0px 30px;
+	display: block;
+	float: center;
+}
+
+#submit {
+	padding-left: 5px;
+	display: block;
+	float: left;
+}
+
+#errors {
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 14px;
+	color: red;
+}
+
+#success {
+	text-align: center;
+	color: green;
+	margin: auto;
+	}
+
+#logo {
+	text-align: center;
+}
+
+#footer {
+	clear: both;
+	padding: 15px;
+	color: white;
+}
+
+input {
+	font-family: Helvetica, Arial, Sans-Serif;
+}
+
+a img {
+	border: none
+}
